@@ -4,4 +4,4 @@ require('mix-tailwindcss')
 
 mix.js('src/js/app.js', './dist/')
     .sass('src/css/style.scss', './')
-    .tailwind("./tailwind.config.js");
+    .tailwind("./tailwind.config.js")
