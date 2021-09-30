@@ -2,7 +2,7 @@
 <?php
 
 // Configure les fonctionnalités de bases
-function bemytheme_setup(){
+function miya_setup(){
 
     // Prise en charge des images de mise en avant
     add_theme_support('post-thumbnails');
@@ -15,15 +15,18 @@ function bemytheme_setup(){
         'main' => 'Menu Principal',
     ) );
 
+    // Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
+
 }
-add_action( 'after_setup_theme', 'bemytheme_setup' );
+add_action( 'after_setup_theme', 'miya_setup' );
 
 // Ajout des scripts
-function bemytheme_register_assets(){
+function miya_register_assets(){
 
     // CSS
     wp_enqueue_style( 
-        'bemytheme', 
+        'miya', 
         get_stylesheet_uri( ),
         array(),
         '1.0'
@@ -31,7 +34,7 @@ function bemytheme_register_assets(){
 
     // JS
     wp_enqueue_script( 
-        'bemytheme', 
+        'miya', 
         get_template_directory_uri() . '/dist/app.js', 
         array(),
         '1.0',
@@ -39,4 +42,4 @@ function bemytheme_register_assets(){
     );
 
 }
-add_action( 'wp_enqueue_scripts', 'bemytheme_register_assets');
+add_action( 'wp_enqueue_scripts', 'miya_register_assets');
