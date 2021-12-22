@@ -1,0 +1,165 @@
+.site-header {
+	padding: 15px 0;
+
+	&__logo {
+		width: 110px;
+	}
+
+	&__burger {
+		cursor: pointer;
+		position: relative;
+		padding: 8px 0;
+		z-index: 50;
+
+		@media screen and (min-width: $lg) {
+			display: none;
+		}
+
+		.line {
+			height: 1px;
+			width: 30px;
+			margin: 6px 0;
+			transition: 0.3s $ease;
+			transform-origin: center center;
+			@apply bg-dark;
+		}
+
+		&.active {
+			.line {
+				@apply bg-light;
+			}
+
+			.line-2 {
+				transform: scaleX(0);
+			}
+
+			.line-1 {
+				transform: rotate(45deg) translateX(10px);
+			}
+
+			.line-3 {
+				transform: rotate(-45deg) translateX(9px);
+			}
+		}
+	}
+
+	&__nav {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s linear 0.5s, opacity 0.5s;
+
+		@apply bg-dark text-light text-xs z-40 uppercase;
+
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			transition: visibility 0s linear 0s, opacity 0.5s;
+		}
+
+		&__list {
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			@media screen and (min-width: $lg) {
+				width: auto;
+				height: auto;
+				flex-direction: row;
+				justify-content: end;
+			}
+		}
+
+		li {
+			padding: 2vh 0;
+			@media screen and (min-width: $lg) {
+				padding: 0 12px;
+			}
+
+			a {
+				position: relative;
+				padding: 6px 0;
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+
+					width: 100%;
+					height: 1px;
+
+					background: $dark;
+					transform: scaleX(0);
+					transition: transform 0.3s $ease;
+				}
+
+				&:hover {
+					&::after {
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: $lg) {
+			position: relative;
+			visibility: visible;
+			opacity: 1;
+			background: none;
+			color: $dark;
+		}
+	}
+
+	&__icon-instagram {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		text-indent: -9999px;
+
+		background: url("./dist/img/icon-instagram-light.svg") center center
+			no-repeat;
+		background-size: 16px 16px;
+
+		@media screen and (min-width: $lg) {
+			background: url("./dist/img/icon-instagram.svg") center center
+				no-repeat;
+			background-size: 16px 16px;
+			margin: 0 12px;
+
+			&:hover {
+				opacity: 0.65;
+			}
+		}
+	}
+
+	&__icon-card {
+		display: inline-block;
+		// width: 16px;
+		height: 16px;
+		padding-left: 20px;
+		line-height: 16px;
+		// text-indent: -9999px;
+
+		background: url("./dist/img/icon-card-light.svg") center left no-repeat;
+		background-size: 16px 16px;
+
+		@media screen and (min-width: $lg) {
+			background: url("./dist/img/icon-card.svg") center left no-repeat;
+			background-size: 16px 16px;
+
+			&:hover {
+				opacity: 0.65;
+			}
+		}
+	}
+}

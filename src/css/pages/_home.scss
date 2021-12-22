@@ -1,0 +1,173 @@
+.home {
+	// HERO
+	.hero {
+		position: relative;
+		&__img-container {
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-bottom: 100%;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				left: -1px;
+				width: 100%;
+				height: 100%;
+				background: url("./dist/img/shape-mask.svg") bottom left
+					no-repeat;
+				background-size: 100%;
+			}
+		}
+		&__img {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&__text-content {
+			padding: 5vh var(--page-padding);
+
+			&__title {
+				@apply font-title font-bold text-green text-lg uppercase leading-tight;
+
+				.p100 {
+					@apply text-red leading-none;
+					font-size: 3.5rem;
+					font-size: max(6.2vw, 3.5rem);
+
+					@media screen and (min-width: $lg) {
+						font-size: 6.2vw;
+						font-size: max(6.2vw, 3.5rem);
+					}
+				}
+
+				.feminin {
+					@apply leading-none;
+					font-size: 3.5rem;
+					font-size: max(6.2vw, 3.5rem);
+
+					@media screen and (min-width: $lg) {
+						font-size: 6.2vw;
+						font-size: max(6.2vw, 3.5rem);
+					}
+				}
+			}
+		}
+		.deco-circle {
+			top: 90%;
+
+			@media screen and (min-width: $md) {
+				top: 75%;
+			}
+		}
+	}
+
+	// PRODUITS
+	.produits {
+		.swiper {
+			padding: 0 var(--page-padding);
+			z-index: 0;
+
+			@media screen and (min-width: $lg) {
+				width: 75%;
+				margin: 0;
+				padding-right: 0;
+			}
+		}
+		.swiper-slide {
+			width: 90%;
+			margin-right: 30px;
+
+			@media screen and (min-width: $md) {
+				width: 40%;
+			}
+
+			@media screen and (min-width: $lg) {
+				width: 28%;
+				margin-right: 0;
+				@apply pr-6;
+
+				&:nth-child(3) {
+					width: 44%;
+					padding-right: 0;
+
+					.product-item__img-container {
+						padding-bottom: 100%;
+					}
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__touslesproduits {
+			text-align: center;
+
+			@media screen and (min-width: $lg) {
+				text-align: left;
+				width: 25%;
+				padding: 7vw var(--page-padding) 0;
+			}
+		}
+	}
+
+	// CITATION
+	.citation {
+		background: $green url("./dist/img/motif-background.svg") center center
+			no-repeat fixed;
+		background-size: cover;
+		color: $light;
+
+		.container {
+			padding-top: 15vh;
+			padding-bottom: 10vh;
+
+			@media screen and (min-width: $md) {
+				width: calc(70% + (var(--page-padding) * 2));
+			}
+			@media screen and (min-width: $lg) {
+				width: calc(57% + (var(--page-padding) * 2));
+			}
+		}
+
+		&__text {
+			@apply relative text-2xl font-title font-bold uppercase;
+			z-index: 1;
+
+			&::before {
+				--width: 85px;
+				--height: 62px;
+
+				content: "";
+				@apply absolute top-0 left-0;
+				z-index: -1;
+
+				width: var(--width);
+				height: var(--height);
+				background: url("./dist/img/citation-icon.svg") center center
+					no-repeat;
+				background-size: var(--width) var(--height);
+				transform: translate(
+					calc(var(--width) * -0.2),
+					calc(var(--height) * -0.6)
+				);
+
+				@media screen and (min-width: $lg) {
+					--width: 170px;
+					--height: 123px;
+				}
+			}
+		}
+
+		&__auteur {
+			@apply text-sm font-title font-bold uppercase text-right mt-8;
+		}
+	}
+}

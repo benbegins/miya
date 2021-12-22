@@ -1,0 +1,58 @@
+.boutique {
+	.product-item {
+		--margin: 2rem;
+		margin-bottom: var(--margin);
+
+		@media screen and (min-width: $lg) {
+			--margin: 4rem;
+			grid-column: span 2;
+
+			&:nth-child(3n + 2) {
+				grid-column: span 3;
+				.product-item__img-container {
+					padding-bottom: 100%;
+				}
+			}
+
+			&:nth-child(6n + 3) {
+				grid-column: 1 / span 2;
+			}
+
+			&:nth-child(6n + 6) {
+				grid-column: 1 / span 7;
+				.product-item__img-container {
+					padding-bottom: 60%;
+
+					&::after {
+						content: "";
+						@apply absolute inset-0;
+						background: rgba(0, 0, 0, 0.2);
+						background: linear-gradient(
+							270deg,
+							rgba(0, 0, 0, 0) 0%,
+							rgba(0, 0, 0, 0.3) 100%
+						);
+					}
+				}
+
+				.product-item__infos {
+					position: absolute;
+					bottom: calc(30px + var(--margin));
+					left: 60px;
+					color: $light;
+				}
+			}
+		}
+	}
+
+	&__list-products {
+		@media screen and (min-width: $md) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 1.5rem;
+		}
+		@media screen and (min-width: $lg) {
+			grid-template-columns: repeat(7, 1fr);
+		}
+	}
+}

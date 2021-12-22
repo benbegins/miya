@@ -1,0 +1,33 @@
+.page-texte {
+	.main-content {
+		h1,
+		h2 {
+			@apply text-lg font-title font-extrabold uppercase;
+		}
+		h3,
+		h4,
+		h5,
+		h6 {
+			@apply text-sm font-title font-extrabold uppercase mt-16 mb-4;
+		}
+
+		h1:nth-child(n + 2),
+		h2:nth-child(n + 2) {
+			@apply mt-32;
+		}
+
+		p,
+		ul {
+			@apply text-sm my-4;
+		}
+
+		li {
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}

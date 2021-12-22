@@ -1,0 +1,117 @@
+.pour-les-clubs {
+	// 01 Offre sur mesure
+	.sur-mesure {
+		@media screen and (min-width: $lg) {
+			display: grid;
+			grid-template-columns: 5fr 3fr;
+			align-items: start;
+		}
+
+		.img-container {
+			position: relative;
+
+			@media screen and (min-width: $lg) {
+				width: 92%;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				right: -1px;
+				width: 100%;
+				height: 100%;
+				background: url("./dist/img/shape-mask-bottom-right.svg") bottom
+					right no-repeat;
+				background-size: contain;
+			}
+		}
+		.text-container {
+			padding: 0 var(--page-padding);
+		}
+	}
+
+	// 02 Offre collection
+	.collection {
+		@media screen and (min-width: $lg) {
+			display: grid;
+			grid-template-columns: 3fr 5fr;
+			align-items: start;
+		}
+
+		.text-container {
+			padding: 0 var(--page-padding);
+		}
+
+		&__list {
+			padding: 0 var(--page-padding);
+
+			&__wrapper {
+				@media screen and (min-width: $lg) {
+					flex-wrap: wrap;
+				}
+			}
+
+			&__item {
+				position: relative;
+				width: 60%;
+				margin-right: 3rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				@media screen and (min-width: $md) {
+					width: 26%;
+				}
+
+				@media screen and (min-width: $lg) {
+					width: calc(33% - 3rem);
+					margin-right: 0;
+					margin-left: 3rem;
+					margin-bottom: 3rem;
+				}
+
+				.nom_du_design {
+					@apply absolute text-sm font-title font-extrabold uppercase leading-none bottom-0 left-0;
+					transform-origin: top left;
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+
+	// Réassurance
+	.reassurance {
+		&__list {
+			@apply bg-green text-light;
+			padding: 2rem var(--page-padding);
+
+			@media screen and (min-width: $lg) {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2rem;
+				padding: 4rem var(--page-padding);
+			}
+		}
+
+		&__item {
+			@apply text-sm;
+			position: relative;
+			padding-left: 30px;
+			margin: 2rem 0;
+
+			&::before {
+				content: "";
+				width: 14px;
+				height: 9px;
+				background: url("./dist/img/icon-check.svg") center center
+					no-repeat;
+				background-size: 14px 9px;
+				position: absolute;
+				top: 10px;
+				left: 0;
+			}
+		}
+	}
+}

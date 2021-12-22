@@ -1,0 +1,1 @@
+<button class="btn-secondary" @click="guideDesTailles = true">Guide des tailles</button>

@@ -12,8 +12,34 @@ License URI: LICENSE
 Text Domain: miya
 */
 
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+@import url("https://use.typekit.net/yjq0mdz.css");
+
+//Tailwind
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
+
+//Global
+@import "./variables";
+@import "./global";
+
+//Components
+@import "./components/text";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/buttons";
+@import "./components/product-item";
+@import "./components/section-imgtext";
+@import "./components/guide-des-tailles";
+@import "./components/woocommerce";
+
+//Pages
+@import "./pages/home";
+@import "./pages/boutique";
+@import "./pages/a-propos";
+@import "./pages/pour-les-clubs";
+@import "./pages/contact";
+@import "./pages/single-product";
+@import "./pages/page-texte";

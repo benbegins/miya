@@ -1,0 +1,60 @@
+.instagram {
+	&__motif {
+		margin-top: 104px;
+		height: 104px;
+		width: 100%;
+		background: url("./dist/img/motif-y-repeat.svg") top center repeat;
+		background-size: 128px 52px;
+		opacity: 0.2;
+	}
+
+	#sb_instagram.sbi_col_5.sbi_disable_mobile #sbi_images .sbi_item {
+		width: 50%;
+
+		&:last-child {
+			display: none;
+		}
+
+		@media screen and (min-width: $md) {
+			width: 20%;
+			&:last-child {
+				display: block;
+			}
+		}
+	}
+}
+
+.site-footer {
+	background: $dark;
+	color: $light;
+
+	&__main {
+		padding-top: 4rem;
+
+		@media screen and (min-width: $md) {
+			padding: 10vh 0;
+		}
+
+		@media screen and (min-width: $lg) {
+			padding: 12vw 0;
+		}
+	}
+
+	&__nav {
+		@apply font-title  text-sm uppercase font-bold;
+
+		a {
+			display: inline-block;
+			padding: 15px 0;
+			transition: opacity 0.2s;
+
+			&:hover {
+				opacity: 0.75;
+			}
+
+			@media screen and (min-width: $lg) {
+				padding: 10px 0;
+			}
+		}
+	}
+}

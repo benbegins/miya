@@ -1,0 +1,176 @@
+//price
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+	@apply text-sm text-dark;
+}
+
+// Bouton
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	@apply bg-green text-light text-xs font-bold uppercase py-4 px-8 rounded-none;
+	transition: background 0.25s;
+
+	&:hover {
+		@apply bg-dark;
+	}
+}
+
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt:disabled[disabled],
+.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt:disabled[disabled],
+.woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover {
+	@apply bg-green text-light;
+}
+
+// Button Secondary
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	@apply bg-dark text-light text-xs py-4 px-8 uppercase font-bold rounded-none;
+
+	&:hover {
+		@apply bg-green text-light;
+	}
+}
+
+// Input
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+	min-width: 150px;
+}
+
+// Panier & Commande
+.woocommerce__container {
+	form {
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="password"] {
+			@apply text-sm p-4 border border-dark bg-light;
+			width: auto;
+		}
+		.select2-container--default .select2-selection--single {
+			@apply border border-dark bg-light rounded-none;
+			height: 53px;
+		}
+		.select2-container--default
+			.select2-selection--single
+			.select2-selection__rendered {
+			color: $dark;
+			@apply text-sm;
+			line-height: 53px;
+		}
+		.select2-container--default
+			.select2-selection--single
+			.select2-selection__arrow {
+			height: 50px;
+		}
+		textarea {
+			@apply p-4 border border-dark bg-light;
+			width: auto;
+			min-height: 250px;
+		}
+	}
+	h3,
+	h2 {
+		margin: 60px 0 30px;
+		@apply text-xl font-title uppercase font-extrabold;
+	}
+	.woocommerce-Address-title {
+		margin-top: 60px;
+
+		h3 {
+			margin-top: 0;
+		}
+	}
+	a:hover {
+		color: $green;
+	}
+	mark {
+		background-color: $green;
+	}
+	.quantity .qty {
+		background: $light;
+	}
+	label {
+		@apply text-xs;
+	}
+	.woocommerce button.button:disabled,
+	.woocommerce button.button:disabled[disabled] {
+		@apply bg-dark text-light py-4 px-8;
+	}
+	.woocommerce-checkout-payment {
+		label {
+			@apply text-sm;
+		}
+	}
+}
+
+// Notices
+.woocommerce-info {
+	border-top-color: $dark;
+	&::before {
+		color: $dark;
+	}
+}
+.woocommerce-message {
+	border-top-color: $green;
+	&::before {
+		color: $green;
+	}
+}
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	@apply text-sm border-l border-r border-b;
+	a {
+		text-decoration: underline;
+	}
+}
+
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+	width: auto;
+}
+
+// COMPTE
+.woocommerce-MyAccount-navigation-link {
+	padding: 15px 10px;
+	@apply border-b border-dark border-opacity-25;
+
+	@media screen and (min-width: $lg) {
+		margin-right: 5vw;
+	}
+
+	&.is-active {
+		@apply font-bold bg-light;
+	}
+}
+
+// Commande validée
+.woocommerce-thankyou-order-received {
+	@apply text-xl mb-12 font-title font-bold;
+}

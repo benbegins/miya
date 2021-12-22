@@ -1,0 +1,123 @@
+// @import url("https://use.typekit.net/pig7xlg.css");
+
+::selection {
+	@apply bg-green text-light;
+}
+
+:root {
+	--page-padding: 1.5rem;
+	--vert-separation: 80px;
+	@media screen and (min-width: $sm) {
+		--page-padding: 3rem;
+		--vert-separation: 100px;
+	}
+	@media screen and (min-width: $lg) {
+		--page-padding: 4vw;
+		--vert-separation: 130px;
+	}
+	@media screen and (min-width: $xl) {
+		--vert-separation: 12vw;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	@apply bg-light text-dark text-base;
+}
+
+.container {
+	max-width: none;
+}
+
+// Page Title
+.page-title-lg {
+	@apply text-3xl font-title font-extrabold uppercase text-green;
+}
+
+.page-title-sm {
+	@apply text-2xl font-title font-extrabold uppercase text-dark;
+}
+
+// Sections padding
+.section-pad {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@media screen and (min-width: $md) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	@media screen and (min-width: $lg) {
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
+	@media screen and (min-width: $xl) {
+		padding-top: 12vw;
+		padding-bottom: 12vw;
+	}
+}
+.section-pad-top {
+	padding-top: 80px;
+	@media screen and (min-width: $md) {
+		padding-top: 100px;
+	}
+	@media screen and (min-width: $lg) {
+		padding-top: 130px;
+	}
+	@media screen and (min-width: $xl) {
+		padding-top: 12vw;
+	}
+}
+.section-pad-bottom {
+	padding-bottom: 80px;
+	@media screen and (min-width: $md) {
+		padding-bottom: 100px;
+	}
+	@media screen and (min-width: $lg) {
+		padding-bottom: 130px;
+	}
+	@media screen and (min-width: $xl) {
+		padding-bottom: 12vw;
+	}
+}
+
+// Red Circle
+.deco-circle {
+	position: absolute;
+	width: 30px;
+	height: 105px;
+	background: url("./dist/img/deco-circle-left.svg") center center no-repeat;
+	background-size: 100%;
+
+	@media screen and (min-width: $lg) {
+		width: 64px;
+		height: 225px;
+	}
+
+	&.left {
+		left: 0;
+	}
+
+	&.right {
+		transform: rotate(180deg);
+		right: 0;
+	}
+}
+
+// Y Pattern
+.y-motif {
+	height: 104px;
+	width: 100%;
+	background: url("./dist/img/motif-y-repeat.svg") top center repeat;
+	background-size: 128px 52px;
+	opacity: 0.2;
+}
