@@ -206,11 +206,8 @@
 		&__list {
 			@media screen and (min-width: $md) {
 				display: grid;
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: repeat(3, 1fr);
 				column-gap: 4rem;
-			}
-			@media screen and (min-width: $lg) {
-				grid-template-columns: repeat(4, 1fr);
 			}
 		}
 

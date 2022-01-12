@@ -114,10 +114,9 @@ if ( post_password_required() ) {
 	<section class="section-pad-top reassurance">
 		<div class="container">
 			<ul class="reassurance__list">
-				<li class="reassurance__item">Payez avec Apple Pay, Mastercard, Visa, AmeEx, PayPal</li>
+				<li class="reassurance__item">Payez avec Mastercard, Visa, AmeEx, PayPal</li>
 				<li class="reassurance__item">Livraison dans toute la France</li>
 				<li class="reassurance__item">Label Oeko-Tex, exempt de substance nocive pour l’environnement</li>
-				<li class="reassurance__item">Livraison offerte à partir 60€ d’achat</li>
 			</ul>
 		</div>
 	</section>
