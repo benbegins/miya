@@ -16,7 +16,7 @@
             </div>
             <div class="text-container mt-16 lg:mt-0">
                 <h2 class="text-lg uppercase font-extrabold font-title leading-tight">01 - Offre sur mesure</h2>
-                <p class="mt-4">Besoin d’un maillot aux couleurs de votre club ? Avec l’offre sur-mesure, Miya crée un visuel de maillot unique à vos couleurs. Nous produisons des équipement personnalisés haut de gamme, dédiés votre sport, qui respecte l’environnement et préserve votre peau.</p>
+                <p class="mt-4">Besoin d’un maillot aux couleurs de votre club ? Avec l’offre sur-mesure, Miya crée un visuel de maillot unique à vos couleurs. Nous produisons des équipements personnalisés haut de gamme, dédiés à votre sport, qui respectent l'environnement et préservent votre peau.</p>
                 <p class="mt-2">Prenez soin de vos joueuses, laissez Miya vous équiper.</p>
                 <a href="#devis" class="btn-primary mt-8">Obtenez un devis</a>
             </div>
@@ -26,7 +26,7 @@
         <section class="collection section-pad">
             <div class="text-container">
                 <h2 class="text-lg uppercase font-extrabold font-title leading-tight">02 - Offre collection</h2>
-                <p class="mt-4">Petit budget ou manque temps ? Choisissez un design parmis notre collection spéciale club et nous le mettrons aux couleurs de votre club !</p>
+                <p class="mt-4">Petit budget ou manque temps ? Choisissez un design parmi notre collection spéciale club et nous le mettrons aux couleurs de votre club !</p>
                 <a href="#devis" class="btn-primary mt-8">Obtenez un devis</a>
             </div>
             <div class="collection__list swiper swiper-list-products mt-16 lg:mt-0">
