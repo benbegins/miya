@@ -7,7 +7,14 @@
             <div class="relative md:grid md:grid-cols-2 lg:items-center">
                 <!-- IMAGE -->
                 <div class="hero__img-container md:order-2">
-                    <?php the_post_thumbnail('xl', array('class' => 'hero__img')); ?>        
+                    <?php the_post_thumbnail('xl', array('class' => 'hero__img')); ?> 
+                    
+                    <?php 
+                    $caption = get_the_post_thumbnail_caption();
+                    if($caption){
+                        echo '<div class="hero__img-caption">' . $caption . '</div>';
+                    }
+                    ?>       
                 </div>
                 <!-- TEXT -->
                 <div class="hero__text-content md:order-1">
