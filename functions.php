@@ -63,3 +63,6 @@ add_image_size( 'xxl', 1900);
 
 // Woocommerce
 require get_template_directory() . '/inc/woocommerce.php';
+
+//Disable plugin auto-update email notification
+add_filter('auto_plugin_update_send_email', '__return_false');
